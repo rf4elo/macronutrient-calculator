@@ -43,28 +43,6 @@ form {
     flex-direction: column;
     gap: 12px;
 
-    & > input {
-        border: none;
-        outline: none;
-        padding: 8px;
-
-        background-color: var(--terciary-color);
-        color: #fff;
-
-        &[type="submit"] {
-            background-color: var(--assent-color);
-            font-weight: bold;
-            cursor: pointer;
-
-            &:hover {
-                filter: brightness(0.8);
-            }
-            &:active {
-                filter: brightness(0.6);
-            }
-        }
-    }
-
     &::after {
         content: "";
         z-index: -1;
@@ -135,4 +113,33 @@ form {
         height: 100%;
     }
 }
+input[type="submit"] {
+    background-color: var(--assent-color);
+    color: #fff;
+    padding: 8px;
 
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+    &:active {
+        filter: brightness(0.7);
+    } 
+}
+
+select {
+    padding: 8px;
+    max-width: 11.5rem;
+
+    border: none;
+    outline: none;
+
+    border-bottom: 2px solid var(--assent-color);
+
+    background-color: var(--terciary-color);
+    color: #55aaff;
+}

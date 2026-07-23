@@ -1,6 +1,7 @@
 <?php
 
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $method = $_SERVER['REQUEST_METHOD'];
 
 ?>
 
@@ -37,7 +38,7 @@
 <body>
     <div>
         <h1>404</h1>
-        <h2>Page "<?php echo $uri; ?>" not found</h2>
+        <h2>Page "<?php echo $uri; ?>" in method "<?php echo $method; ?>" not found.</h2>
     </div>
 </body>
 </html>

@@ -8,6 +8,9 @@ $routes = [
     'GET' => [
         '/' => 'pages/main.php',
     ],
+    'POST' => [
+        '/results' => 'pages/results.php',
+    ]
 ];
 
 
