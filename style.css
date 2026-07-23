@@ -1,0 +1,138 @@
+
+
+:root {
+    --assent-color: #0045ff;
+    --bg-color: #00000a;
+    --secondary-color: #111;
+    --terciary-color: #151515;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--assent-color);
+
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    padding: 10rem 0;
+}
+
+/* FORM */
+form {
+    background-color: var(--secondary-color);
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    position: relative;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    & > input {
+        border: none;
+        outline: none;
+        padding: 8px;
+
+        background-color: var(--terciary-color);
+        color: #fff;
+
+        &[type="submit"] {
+            background-color: var(--assent-color);
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(0.8);
+            }
+            &:active {
+                filter: brightness(0.6);
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        z-index: -1;
+        background-color: var(--assent-color);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        border-radius: 12px;
+    
+        filter: blur(8px);
+    
+        animation: bg-glow 3s ease-in-out infinite;
+    }
+}
+@keyframes bg-glow {
+    0% { opacity: 1; filter: blur(10px); }
+    50% { opacity: 0.5; filter: blur(8px); }
+    100% { opacity: 1; filter: blur(10px); }
+}
+
+
+/* INPUT */
+.input-field {
+    background-color: var(--terciary-color);
+    width: 11.5rem;
+    height: 32px;
+
+    position: relative;
+
+    & > input {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        border: none;
+        outline: none;
+        padding: 8px;
+
+        background-color: transparent;
+        color: #fff;
+
+        &::placeholder {
+            color: #55aaff;
+        }
+    }
+
+    & .dinamic-input-bg {
+        z-index: 0;
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+
+        background: var(--assent-color);
+        
+        width: 100%;
+        height: 5%;
+
+        transition: all 0.5s ease-in-out;
+    }
+
+    & > input:focus + .dinamic-input-bg,
+    input:not(:placeholder-shown) + .dinamic-input-bg {
+        height: 100%;
+    }
+}
+
