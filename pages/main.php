@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Macronutrient Calculator</title>
     <link rel="stylesheet" href="../styles/style.css" >
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>Macronutient Calculator</h1>
+    <h1>Macronutien<br/>Calculator</h1>
 
     <form method="post" action="/results" >
 
