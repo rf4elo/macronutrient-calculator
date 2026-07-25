@@ -11,9 +11,9 @@
 ## How to use
 
 ### Dependencies
-To run the app, you only need to have PHP version 8.5.8 installed.
+To run the app, you only need to have Docker Desktop installed.
 
-- [PHP Download](https://www.php.net/downloads.php)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ### Instalation and run
 
@@ -21,9 +21,13 @@ To run the app, you only need to have PHP version 8.5.8 installed.
 ```bash
 $ git clone https://github.com/rf4elo/macronutrient-calculator.git
 ```
-- Run in the php integrated server
+- Build the docker image
 ```bash
-$ php -S localhost:3000
+docker build -t <project-name> .
+```
+- Run the project
+```bash
+docker run -p 8000:8000 <project-name>
 ```
 
 # Project License
