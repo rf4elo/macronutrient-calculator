@@ -34,6 +34,9 @@ docker run -p 8000:8000 <project-name>
 docker stop <project-name-or-id>
 ```
 
+For more information about Docker, visit the documentation.
+- [Docker Documentation](https://docs.docker.com/)
+
 # Project License
 - [MIT License](./LICENSE)
 
