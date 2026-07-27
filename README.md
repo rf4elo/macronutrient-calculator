@@ -29,6 +29,10 @@ docker build -t <project-name> .
 ```bash
 docker run -p 8000:8000 <project-name>
 ```
+- Stop project
+```bash
+docker stop <project-name-or-id>
+```
 
 # Project License
 - [MIT License](./LICENSE)
